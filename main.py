@@ -5,6 +5,8 @@ import webbrowser
 import json
 from urllib.request import urlopen
 
+Tokyomap='Tokyomap.html'
+
 class Map:
     def init(self, center, zoom_start):
         self.center = center
@@ -29,7 +31,10 @@ def get_location(ip):
 
 location = get_location('ip')
 m = folium.Map(location=location,zoom_start=13)
-m
+
+# marker for user's current location
+folium.Marker(location = location,
+popup="Current location", icon=folium.Icon(color='red', icon='info-sign', prefix='fa')).add_to(m)
 
 
 def auto_open(path):
@@ -83,7 +88,7 @@ for i in range(0, len(df)):
                   popup=popup, icon=folium.Icon(color='blue', icon='info-sign', prefix='fa')).add_to(m)
 
 
-Tokyomap='Tokyomap.html'
+
 
 m.save('Tokyomap.html')
 
