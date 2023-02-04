@@ -121,15 +121,6 @@ body {
   height: 700px;
 }
 
-.my__Location {
-  position: relative;
-  display: flex;
-  margin-top: 677px;
-  width: 25px;
-  height: 25px;
-  border-radius: var(--size-border-radius);
-}
-
 /* List */
 #List {
   text-align: center;
