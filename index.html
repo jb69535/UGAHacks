@@ -55,24 +55,22 @@
         </ul>
       </div>
     </nav>
-    
+
     <!-- Map -->
     <section id="Map">
       <div class="map__Container">
-        <iframe class="tokyo__Map"  src="Tokyomap.html" frameborder="0">
+        <iframe class="tokyo__Map" src="Tokyomap.html" frameborder="0">
         </iframe>
       </div>
-      
-        <i class="fa-solid fa-location-arrow">
-        </i>
-      </div>
+      <button class="my__Location" onclick="getLocation()">
+        <i class="fa-solid fa-location-arrow"> </i>
+      </button>
+      <p id="current__Location"></p>
     </section>
 
     <!-- List -->
     <section id="List">
-      <div class="list__Container">
-        <py-script src="cafeList.py"></py-script>
-      </div>
+      <div class="list__Container"></div>
     </section>
 
     <!-- Information -->

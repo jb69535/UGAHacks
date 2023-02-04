@@ -117,18 +117,18 @@ body {
   position: relative;
   display: flex;
   margin-top: 800px;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: var(--size-border-radius);
+}
+
+.current__Location {
+  position: relative;
+  display: flex;
+  margin-top: 800px;
+  width: 25px;
+  height: 25px;
+  border-radius: var(--size-border-radius);
 }
 
 /* List */
-
-#List {
-  position: relative;
-  display: flex;
-}
-
-.list__Container {
-  position: relative;
-  display: flex;
-}
