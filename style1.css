@@ -1,0 +1,42 @@
+/* Global */
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-platinum: #ebebeb;
+    --color-grey: #949494;
+    --color-blue-purple: #acb9ec;
+    --color-middle-blue-green: #9ce7de;
+    --color-jet: #333333;
+    --color-black: #000000;
+    --color-charm-pink: #e58ba3;
+  
+    /* Font Size */
+    --font-large: 40px;
+    --font-medium: 22px;
+    --font-regular: 15px;
+    --font-small: 12px;
+    --font-micro: 10px;
+  
+    /* Font Weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+  
+    /* Border Size */
+    --size-border-radius: 4px;
+  
+    /* Animation Duration */
+    --animation-duration: 350ms;
+  }
+  
+  /* Universal */
+  
+  body {
+    background: var(--color-platinum);
+    padding-top: 5px;
+    margin: 0px;
+    font-family: "Audiowide", sans-serif;
+    cursor: default;
+  }
+  
+ 
