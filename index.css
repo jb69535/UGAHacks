@@ -164,10 +164,19 @@ body {
 
 .info__Button {
   position: relative;
-  display: inline-block;
+  display: flex;
   float: right;
 }
 
 .add {
-  
+  position: absolute;
+  top: 200px;
+  right: 100px;
+
+}
+
+.save {
+  position: absolute;
+  top: 200px;
+  right: 30px;
 }
