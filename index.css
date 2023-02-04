@@ -145,7 +145,29 @@ body {
   background-color: var(--color-charm-pink);
 }
 
-.location__p {
+/* Information */
+#Information {
   position: relative;
-  display: table-cell;
+  text-align: left;
+  background-color: var(--color-blue-purple);
+  margin-left: 100px;
+  width: 900px;
+  height: 300px;
+}
+
+.location {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.info__Button {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.add {
+  
 }
