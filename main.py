@@ -20,7 +20,7 @@ class Map:
 df = pd.read_excel('TokyoCafe.xlsx')
 
 location = df['latitude'].mean(), df['longitude'].mean()
-m = folium.Map(location=location,zoom_start=3)
+m = folium.Map(location=location,zoom_start=13)
 m
 
 
@@ -46,7 +46,7 @@ def popup_html(row):
 <head>
 <h4 style="margin-bottom:10"; width="200px">{}</h4>""".format(Name) + """
 </head>
-    <table style="height: 126px; width: 350px;">
+    <table style="height: 100px; width: 250px;">
 <tbody>
 <tr>
 <td style="background-color: """ + left_col_color + """;"><span style="color: #ffffff;">Study</span></td>
