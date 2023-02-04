@@ -38,5 +38,34 @@
     font-family: "Audiowide", sans-serif;
     cursor: default;
   }
+
+/* Navbar */
+#Navbar {
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid var(--color-grey);
+}
+
+/* Navbar Logo */
+  .navbar__logo {
+    position: relative;
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    margin: 0%;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hamburger__Icon {
+
+  }
   
  
