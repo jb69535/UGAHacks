@@ -66,6 +66,14 @@ def popup_html(row):
 """
     return html
 
+g = geocoder.ip('me')
+html = popup_html
+userloc = {g.latlng[0]}, {g.latlng[1]} #user's current location latitude longitude
+iframe = branca.element.IFrame(html=html, width=510, height=280)
+popup = folium.Popup(folium.Html(html, script=True), max_width=500)
+folium.Marker(userloc, icon=folium.Icon(color='red', icon='info-sign', prefix='fa')).add_to(m)
+
+
 for i in range(0, len(df)):
     html = popup_html(i)
     iframe = branca.element.IFrame(html=html, width=510, height=280)
@@ -73,11 +81,6 @@ for i in range(0, len(df)):
     folium.Marker([df['latitude'].iloc[i], df['longitude'].iloc[i]],
                   popup=popup, icon=folium.Icon(color='blue', icon='info-sign', prefix='fa')).add_to(m)
    
-
-g = geocoder.ip('me')
-userloc = {g.latlng[0]}, {g.latlng[1]} #user's current location latitude longitude
-folium.Marker(userloc, icon=folium.Icon(color='red', icon='info-sign', prefix='fa')).add_to(m)
-
 
 Tokyomap='Tokyomap.html'
 
