@@ -8,6 +8,8 @@
     <meta name="description" content="Portfolio for world-renowned software engineer Jun">
     <meta name="author" content="toKyoCafe">
     <link rel="icon" type="image/png" href="img/Jun_Beom-removebg-preview.png" />
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     <script src="https://kit.fontawesome.com/6f42a7c997.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,19 +35,53 @@
     <!-- Map -->
     <section id="Map">
         <div id="map__Contain">
-            <map name="bucks"><iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.4730502650336!2d-83.37585592477596!3d33.950322175763866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f66ce08b1b8081%3A0xb428e97f527b8075!2sUGA%20Miller%20Learning%20Center!5e0!3m2!1sko!2sus!4v1675478751614!5m2!1sko!2sus" 
-                width="600" height="450" style="border:0;" allowfullscreen="" 
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            </map>
+            
+            
         </div>
     </section>
 
     <!-- List -->
     <section id="List">
         <div id="list__Container">
-
+            <py-config>
+                packages = [
+                  "folium",
+                  "pandas"
+                ]
+                </py-config>
+                <py-script>
+                  import folium
+                  import json
+                  import pandas as pd
+    
+                  from pyodide.http import open_url
+    
+                  url = (
+                      "https://raw.githubusercontent.com/python-visualization/folium/master/examples/data"
+                  )
+                  state_geo = f"{url}/us-states.json"
+                  state_unemployment = f"{url}/US_Unemployment_Oct2012.csv"
+                  state_data = pd.read_csv(open_url(state_unemployment))
+                  geo_json = json.loads(open_url(state_geo).read())
+    
+                  m = folium.Map(location=[48, -102], zoom_start=3)
+    
+                  folium.Choropleth(
+                      geo_data=geo_json,
+                      name="choropleth",
+                      data=state_data,
+                      columns=["State", "Unemployment"],
+                      key_on="feature.id",
+                      fill_color="YlGn",
+                      fill_opacity=0.7,
+                      line_opacity=0.2,
+                      legend_name="Unemployment Rate (%)",
+                  ).add_to(m)
+    
+                  folium.LayerControl().add_to(m)
+    
+                  display(m, target="folium")
+                </py-script>
         </div>
     </section>
 
