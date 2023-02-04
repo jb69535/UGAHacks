@@ -1,10 +1,15 @@
-/* Ads
-Makes Ads move automatically every 5s */ 
-var counter = 1;
-setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    counter++;
-    if(counter > 4) {
-        counter = 1;
-    }
-}, 5000); 
+'use strict';
+
+// Make navbar trasparent when it is on the top.
+const navbar = document.querySelector('#Navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+document.addEventListener(
+    'scroll', () => {
+        console.log(window.scrollY)
+        console.log('navbarHeight: ${navbarHeight}');
+        if (window.scrollY > navbarHeight) {
+            navbar.classList.add('navbar--dark');
+        } else {
+            navbar.classList.remove('navbar--dark');
+        }
+    });

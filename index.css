@@ -86,6 +86,11 @@ body {
   animation-duration: var(--animation-duration);
 }
 
+#Navbar.navbar--dark {
+  background-color: var(--color-platinum);
+  height: 65px;
+}
+
 /* Map */
 #Map {
   position: relative;
@@ -93,6 +98,7 @@ body {
 }
 
 .map__Container {
+  margin-top: 62px;
   position: relative;
   display: flex;
   width: 700px;
@@ -100,8 +106,27 @@ body {
 }
 
 .tokyo__Map {
+  margin-top: 62px;
   position: relative;
   display: flex;
   width: 700px;
   height: 700px;
+}
+
+.my__Location {
+  position: relative;
+  display: flex;
+  margin-top: 800px;
+  width: 20px;
+  height: 20px;
+}
+
+/* List */
+
+#List {
+
+}
+
+.list__Container {
+
 }
