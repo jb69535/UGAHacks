@@ -90,37 +90,62 @@ body {
   background-color: var(--color-platinum);
   height: 65px;
 }
+/* Main__Container */
+
+#Main__Container {
+  margin-top: 62px;
+  position: relative;
+  display: flex;
+}
 
 /* Map */
 #Map {
+  margin-left: 50px;
+  margin-top: 62px;
   position: relative;
   display: flex;
 }
 
 .map__Container {
-  margin-top: 62px;
   position: relative;
   display: flex;
-  width: 700px;
+  margin-left: 50px;
+  width: 900px;
   height: 700px;
 }
 
 .tokyo__Map {
-  margin-top: 62px;
   position: relative;
   display: flex;
-  width: 700px;
+  width: 900px;
   height: 700px;
 }
 
 .my__Location {
   position: relative;
   display: flex;
-  margin-top: 800px;
+  margin-top: 677px;
   width: 25px;
   height: 25px;
   border-radius: var(--size-border-radius);
 }
 
-
 /* List */
+#List {
+  text-align: center;
+  margin-top: 62px;
+  position: relative;
+}
+
+.list__Container {
+  position: relative;
+  display: table;
+  width: 300px;
+  height: 700px;
+  background-color: var(--color-charm-pink);
+}
+
+.location__p {
+  position: relative;
+  display: table-cell;
+}

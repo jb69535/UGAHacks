@@ -53,27 +53,33 @@
     </nav>
 
     <!-- Map -->
-    <section id="Map">
-      <div class="map__Container">
-        <iframe class="tokyo__Map" src="Tokyomap.html" frameborder="0">
-        </iframe>
-      </div>
-      <button class="my__Location" onclick="getLocation()">
-        <i class="fa-solid fa-location-arrow"> </i>
-      </button>
-      <p id="current__Location"></p>
-    </section>
+    <section id="Main__Container">
+      <section id="Map">
+        <div class="map__Container">
+          <iframe class="tokyo__Map" src="Tokyomap.html" frameborder="0">
+          </iframe>
+        </div>
+        <button class="my__Location" onclick="getLocation()">
+          <i class="fa-solid fa-location-arrow"> </i>
+        </button>
+        <p id="current__Location"></p>
+      </section>
 
-    <!-- List -->
-    <section id="List">
-      <div class="list__Container"></div>
+      <!-- List -->
+      <section id="List">
+        <div class="list__Container">
+          <p>list</p>
+          <hr>
+
+        </div>
+      </section>
     </section>
 
     <!-- Information -->
     <section id="Information">
       <div class="information__Container">
         <div class="location">
-          <p>Location</p>
+          <p class="location__p">Location</p>
         </div>
         <button id="add">Add</button>
         <button id="save">Save</button>

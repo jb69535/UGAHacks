@@ -2,6 +2,7 @@ import pandas as pd
 import folium
 import branca
 import webbrowser
+import geocoder 
 
 class Map:
     def init(self, center, zoom_start):
