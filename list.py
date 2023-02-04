@@ -1,4 +1,6 @@
 from tkinter import*
+import folium
+from main import *
 
 win = Tk()
 win.title("CafeName")
@@ -21,13 +23,16 @@ def command_return_loc():
         for i in listbox.curselection():
             lon=df.iloc[i, 3]
             lat=df.iloc[i, 4]
-            loc = lon, lat
-            m = folium.Map(location=loc, zoom_start=15)
+            loc=lon, lat
+            map = folium.Map(location=loc, zoom_start=15)
+            html = popup_html(i)
+            iframe = branca.element.IFrame(html=html, width=510, height=280)
+            popup = folium.Popup(folium.Html(html, script=True), max_width=500)
+            folium.Marker([df['latitude'].iloc[i], df['longitude'].iloc[i]],
+                          popup=popup, icon=folium.Icon(color='red', icon='info-sign', prefix='fa')).add_to(map)
 
-            Tokyomap = 'Tokyomap.html'
-
-            m.save('Tokyomap.html')
-
+            Tokyomap = 'Tokyomap1.html'
+            map.save('Tokyomap1.html')
             webbrowser.open(Tokyomap)
 
 
