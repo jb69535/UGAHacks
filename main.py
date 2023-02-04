@@ -41,7 +41,7 @@ def auto_open(path):
     html_page = f'{path}'
     f_map.save(html_page)
     # open in browser.
-    new = 2
+    new=2
     webbrowser.open(html_page, new=new)
 
 df=pd.read_excel('TokyoCafe.xlsx')
@@ -82,8 +82,8 @@ def popup_html(row):
 
 for i in range(0, len(df)):
     html = popup_html(i)
-    iframe = branca.element.IFrame(html=html, width=510, height=280)
-    popup = folium.Popup(folium.Html(html, script=True), max_width=500)
+    iframe = branca.element.IFrame(html=html, width=900, height=700)
+    popup = folium.Popup(folium.Html(html, script=True), max_width=500, min_width=500)
     folium.Marker([df['latitude'].iloc[i], df['longitude'].iloc[i]],
                   popup=popup, icon=folium.Icon(color='blue', icon='info-sign', prefix='fa')).add_to(m)
 
