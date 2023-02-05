@@ -100,7 +100,7 @@ body {
 
 /* Map */
 #Map {
-  margin-left: 50px;
+  margin-left: 150px;
   margin-top: 62px;
   position: relative;
   display: flex;
@@ -110,64 +110,36 @@ body {
   position: relative;
   display: flex;
   margin-left: 50px;
-  width: 900px;
-  height: 700px;
+  width: 1000px;
+  height: 800px;
 }
 
 .tokyo__Map {
   position: relative;
   display: flex;
-  width: 900px;
-  height: 700px;
+  width: 1000px;
+  height: 800px;
 }
 
-/* List */
-#List {
-  text-align: center;
-  margin-top: 62px;
-  position: relative;
-}
+/* For below 768px screen width */
+@media screen and (max-width: 767px) {
+  #Map {
+    display: flex;
+    padding-right: 200px;
+    width: 500px;
+    height: 500px;
+  }
+  .map__Container {
+    display: flex;
+    padding-right: 200px;
+    width: 500px;
+    height: 500px;
+  }
 
-.list__Container {
-  position: relative;
-  display: table;
-  width: 300px;
-  height: 700px;
-  background-color: var(--color-charm-pink);
-}
-
-/* Information */
-#Information {
-  position: relative;
-  text-align: left;
-  background-color: var(--color-blue-purple);
-  margin-left: 100px;
-  width: 900px;
-  height: 300px;
-}
-
-.location {
-  position: relative;
-  display: flex;
-  margin-top: 20px;
-  margin-left: 30px;
-}
-
-.info__Button {
-  position: relative;
-  display: flex;
-  float: right;
-}
-
-.add {
-  position: absolute;
-  top: 200px;
-  right: 100px;
-
-}
-
-.save {
-  position: absolute;
-  top: 200px;
-  right: 30px;
+  .tokyo__Map {
+    display: flex;
+    padding-right: 200px;
+    width: 500px;
+    height: 500px;
+  }
 }

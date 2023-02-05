@@ -5,6 +5,7 @@ import webbrowser
 import json
 from urllib.request import urlopen
 
+
 Tokyomap='Tokyomap.html'
 
 class Map:
@@ -18,6 +19,8 @@ class Map:
         #Display the map
         my_map.save("map.html")
         webbrowser.open("map.html")
+
+df=pd.read_excel('TokyoCafe.xlsx')
 
 location = df['latitude'].mean(), df['longitude'].mean()
 m = folium.Map(location=location,zoom_start=13)
@@ -34,7 +37,6 @@ def auto_open(path):
     new=2
     webbrowser.open(html_page, new=new)
 
-df=pd.read_excel('TokyoCafe.xlsx')
 def popup_html(row):
     i = row
     Name = df['Name'].iloc[i]
