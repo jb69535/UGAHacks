@@ -90,7 +90,7 @@ for i in range(0, len(df)):
 
 
 
-m.save('Tokyomap.html')
+m.save('/static/cafe/Tokyomap.html')
 
 webbrowser.open(Tokyomap)
 
