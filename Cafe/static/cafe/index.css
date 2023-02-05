@@ -130,10 +130,11 @@ body {
 
 .list__Container {
   position: relative;
-  display: table;
+  display: block;
   width: 300px;
   height: 700px;
   background-color: var(--color-charm-pink);
+  border-radius: 10px;
 }
 
 /* Information */
