@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toKyoCafe</title>
+    <meta name="author" content="toKyoCafe" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/Jun_Beom-removebg-preview.png"
+    />
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6f42a7c997.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+    <link rel="stylesheet" href="{% static 'cafe/index.css' %}" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="Navbar">
+      <!-- Navbar__logo -->
+      <div class="navbar__logo">
+        <a href="#">
+          <img class="logo" src="{% static 'cafe/Jun Beom.png' %}" alt="Logo" />
+        </a>
+      </div>
+      <!-- Navbar menu -->
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item">
+            <a href="registration.html">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </a>
+          </li>
+          <li class="navbar__menu__item">
+            <a href="login.html">
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Map -->
+    <section id="Main__Container">
+      <section id="Map">
+        <div class="map__Container">
+          <iframe class="tokyo__Map" src="{% static 'cafe/Tokyomap.html' %}" frameborder="0">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- List -->
+      <section id="List">
+        <div class="list__Container">
+          <p>list</p>
+          <hr>
+        </div>
+      </section>
+    </section>
+
+    <!-- Information -->
+    <section id="Information">
+        <div class="location">
+          <p>location</p>
+        </div>
+        <div class="info__Button">
+          <button class="add">Submit</button>
+          <button class="save">Save</button>
+        </div>
+    </section>
+
+    <!-- Rating -->
+    <section id="Rating">
+      <div class="rating__Container">
+        <div class="rating__Study">
+          <p>rating for study</p>
+        </div>
+        <div class="rating__Date">
+          <p>rating for date</p>
+        </div>
+        <div class="rating__Chill">
+          <p>rating for chill</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
