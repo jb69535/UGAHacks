@@ -9,4 +9,6 @@ urlpatterns = [
     path('signup', views.signup, name='signup'),
 
 
+
 ]
+Login_REDIRECT_URL = '/'
