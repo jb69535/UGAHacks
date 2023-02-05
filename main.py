@@ -19,17 +19,7 @@ class Map:
         my_map.save("map.html")
         webbrowser.open("map.html")
 
-
-
-def get_location(ip):
-    request = "https://geolocation-db.com/json/%s" % (ip)
-    with urlopen(request) as url:
-        data = json.loads(url.read().decode())
-        lat = float(data["latitude"])
-        lon = float(data["longitude"])
-        return lat, lon
-
-location = get_location('ip')
+location = df['latitude'].mean(), df['longitude'].mean()
 m = folium.Map(location=location,zoom_start=13)
 
 # marker for user's current location
