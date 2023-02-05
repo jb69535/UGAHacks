@@ -12,3 +12,6 @@ def login(request):
 
 def registration(request):
     return render(request, "cafe/registration.html")
+
+def signup(request):
+    return render(request, "cafe/registration.html")
