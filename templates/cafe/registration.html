@@ -12,6 +12,8 @@
     <div class="container">
       <h1>Registration</h1>
       <form action="#" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
         <input type="email" name="email" placeholder="Email" required />
         <input
           type="text"
@@ -27,6 +29,7 @@
           required
         />
         <input type="submit" value="Submit" />
+
       </form>
     </div>
   </body>

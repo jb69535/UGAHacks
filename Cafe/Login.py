@@ -3,18 +3,18 @@ import sqlite3
 
 app = Flask(__name__)
 
-@app.route('/main')
+@app.route('/index')
 def main():
-    return render_template('/main.html')
+    return render_template('/index.html')
 
 
-@app.route('/login_form')
+@app.route('/registration')
 def login():
-    return render_template('/login_form.html')
+    return render_template('/registration.html')
 
 
-@app.route('/login.proc', methods=['post'])
-def login_proc():
+@app.route('/login', methods=['post'])
+def login():
     Email = request.form['Email']
     Password = request.form['pwd']
 
@@ -33,10 +33,10 @@ def login_proc():
                 session['idx'] = rs[0]
                 session['Email'] = Email
 
-                return redirect(url_for('main'))
+                return redirect(url_for('index.html'))
 
             else:
-                return redirect(url_for('login_form'))
+                return redirect(url_for('registration.html'))
 
 
 app.secret_key = 'sample_secret_key'

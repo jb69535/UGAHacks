@@ -12,15 +12,12 @@
     <div class="container">
       <img src="default-profile-pic.jpg" class="profile-pic" />
       <h1>Login</h1>
-      <form action="#" method="POST">
+      <form action="{% url 'buttonaction' %}" method="POST">
           {% csrf_token %}
           {{ form.as_p }}
         <button type="submit">Login</button>
-        <input type="text" placeholder="Username" required />
-        <input type="password" placeholder="Password" required />
-
-
-
+        <input type="text" name="Email" placeholder="Email" required />
+        <input type="password" name="Password" placeholder="Password" required />
         <input type="submit" value="Login" />
       </form>
       <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a></p>
